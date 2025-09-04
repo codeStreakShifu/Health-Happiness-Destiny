@@ -1,0 +1,80 @@
+.container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: url("#gooey-bubble");
+}
+
+.buttonWrapper {
+  position: relative;
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(to right, #f59e0b, #d97706);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 
+    0 10px 15px -3px rgb(251 191 36 / 0.2),
+    0 4px 6px -4px rgb(251 191 36 / 0.2); */
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.button:hover {
+  /* background: linear-gradient(to right, #d97706, #b45309); */
+  /* transform: translateY(-1x); */
+  /* box-shadow: 
+    0 15px 20px -1px rgb(251 191 36 / 0.3),
+    0 8px 8px -5px rgb(251 191 36 / 0.3); */
+}
+
+.bubbleContainer {
+  position: absolute;
+  top: -60%;  /* Increased space for larger bubbles */
+  left: -50%;
+  width: 200%;  /* Expanded container for larger movement range */
+  height: 210%;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35px;  /* Increased from 24px */
+  height: 35px;  /* Increased from 24px */
+  background: radial-gradient(circle at 30% 30%, #fbbf24, #d97706);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0.85;  /* Slightly reduced for better visual balance */
+  box-shadow: 0 6px 8px -2px rgb(251 191 36 / 0.25);  /* Enhanced shadow for larger bubbles */
+}
+
+.goo {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+/* Remove unused styles */
+.circle,
+.effectButton,
+.effectContainer {
+  display: none;
+}

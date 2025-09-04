@@ -36,6 +36,18 @@ export default {
       },
       backdropBlur: {
         xs: '2px',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      fontWeight: {
+        'black': '900',
+      },
+      letterSpacing: {
+        'widest': '0.2em',
+      },
+      blur: {
+        '3xl': '64px',
       }
     },
   },
